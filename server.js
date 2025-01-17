@@ -11,7 +11,6 @@ import { log } from "console";
 dotenv.config();
 
 const app = express();
-const isDevelopment = process.env.NODE_ENV !== 'production';
 const config = {
   authRequired: false,
   auth0Logout: true,
@@ -29,8 +28,8 @@ const config = {
   session: {
     absoluteDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
     cookie: {
-      domain: "jobfindr-q1cl.onrender.com",
-      secure: !isDevelopment,
+      domain: "https://wdp301-be.onrender.com",
+      secure: true,
       sameSite: "None",
     },
   },
